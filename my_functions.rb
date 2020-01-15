@@ -26,17 +26,27 @@ def get_first_key(hash)
   return hash.keys[0]
 end
 
+# def find_tony(array)
+#   for item in array
+#     if item == 'Tony'
+#       return true
+#     end
+#     if item.class == Array
+#       for name in item
+#         if name == 'Tony'
+#           return true
+#         end
+#       end
+#     end
+#   end
+# end
+
 def find_tony(array)
-  for item in array
+  flat_array = array.flatten()
+  for item in flat_array
     if item == 'Tony'
       return true
     end
-    if item.class == Array
-      for name in item
-        if name == 'Tony'
-          return true
-        end
-      end
-    end
   end
+  return false
 end
